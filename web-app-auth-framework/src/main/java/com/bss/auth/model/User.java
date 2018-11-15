@@ -31,12 +31,14 @@ public class User {
     @Size(min=8)
     private String password;
 
+    private String passwordResetToken;
+
     private String firstName;
 
     private String lastName;
 
     @NotBlank
-    @Email
+    @Email(message="{errors.invalid_email}")
     @Indexed(unique=true)
     private String email;
 
@@ -73,6 +75,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPasswordResetToken() {
+        return passwordResetToken;
+    }
+
+    public void setPasswordResetToken(String passwordResetToken) {
+        this.passwordResetToken = passwordResetToken;
     }
 
     public String getFirstName() {
