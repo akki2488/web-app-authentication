@@ -6,26 +6,23 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
-@Document(collection = "roles")
-public class Role {
-
-    public Role(String role, String description) {
-        this.role = role;
-        this.description = description;
-    }
+/**
+ * Created by Rocky on 15-11-2018.
+ */
+@Document(collection="permissions")
+public class Permission {
 
     @Id
     private String id;
 
+    @NotBlank
     @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
-    private String role;
+    private String name;
 
     private String description;
-
-    @DBRef
-    private Set<Permission> permissions;
 
     public String getId() {
         return id;
@@ -35,12 +32,12 @@ public class Role {
         this.id = id;
     }
 
-    public String getRole() {
-        return role;
+    public String getName() {
+        return name;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -49,22 +46,5 @@ public class Role {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Set<Permission> getPermissions() {
-        return permissions;
-    }
-
-    public void setPermissions(Set<Permission> permissions) {
-        this.permissions = permissions;
-    }
-
-    @Override
-    public String toString() {
-        return String.format(
-                "Role[id=%s, " +
-                        "role='%s', " +
-                        "description='%s']",
-                id, role, description);
     }
 }
