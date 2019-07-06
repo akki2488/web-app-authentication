@@ -4,7 +4,7 @@
 
 	<groupId>com.web-app-authentication</groupId>
 	<artifactId>web-app-auth-parent</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>pom</packaging>
 
 	<name>web-app-auth-parent</name>
