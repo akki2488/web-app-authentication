@@ -18,7 +18,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.csrf.CsrfFilter;
 
 /**
- * Created by Rocky on 14-11-2018.
+ * Created by Akshay Misra on 14-11-2018.
  */
 @Configuration
 @EnableWebSecurity

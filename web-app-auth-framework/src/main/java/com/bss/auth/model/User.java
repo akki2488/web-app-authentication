@@ -14,7 +14,7 @@ import java.math.BigInteger;
 import java.util.Set;
 
 /**
- * Created by Rocky on 15-11-2018.
+ * Created by Akshay Misra on 15-11-2018.
  */
 @Document(collection="users")
 public class User extends Base {

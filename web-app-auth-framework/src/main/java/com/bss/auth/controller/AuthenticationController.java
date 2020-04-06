@@ -13,7 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by Rocky on 14-11-2018.
+ * Created by Akshay Misra on 14-11-2018.
  */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

@@ -1,7 +1,7 @@
 package com.bss.auth.model;
 
 /**
- * Created by Rocky on 15-11-2018.
+ * Created by Akshay Misra on 15-11-2018.
  */
 public class LoginUser {
 

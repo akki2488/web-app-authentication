@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Set;
 
 /**
- * Created by Rocky on 15-11-2018.
+ * Created by Akshay Misra on 15-11-2018.
  */
 @Document(collection = "roles")
 public class Role extends Base {

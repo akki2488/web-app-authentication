@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * Created by Rocky on 14-11-2018.
+ * Created by Akshay Misra on 14-11-2018.
  */
 @RestController
 @RequestMapping("/users")
