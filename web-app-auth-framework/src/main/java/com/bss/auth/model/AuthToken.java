@@ -1,5 +1,8 @@
 package com.bss.auth.model;
 
+/**
+ * Created by Rocky on 15-11-2018.
+ */
 public class AuthToken {
 
     private String token;

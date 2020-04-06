@@ -16,7 +16,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-
+/**
+ * Created by Rocky on 14-11-2018.
+ */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 

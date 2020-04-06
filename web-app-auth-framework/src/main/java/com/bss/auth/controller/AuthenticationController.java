@@ -1,6 +1,5 @@
 package com.bss.auth.controller;
 
-
 import com.bss.auth.config.TokenProvider;
 import com.bss.auth.model.AuthToken;
 import com.bss.auth.model.LoginUser;
@@ -13,7 +12,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-
+/**
+ * Created by Rocky on 14-11-2018.
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/token")

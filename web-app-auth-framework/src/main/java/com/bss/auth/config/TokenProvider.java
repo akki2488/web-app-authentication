@@ -15,6 +15,9 @@ import java.util.Date;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+/**
+ * Created by Rocky on 14-11-2018.
+ */
 @Component
 public class TokenProvider implements Serializable {
 

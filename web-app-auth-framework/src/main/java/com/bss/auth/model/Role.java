@@ -1,6 +1,6 @@
 package com.bss.auth.model;
 
-import org.springframework.data.annotation.Id;
+import com.bss.framework.core.schema.model.Base;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -8,32 +8,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
 
+/**
+ * Created by Rocky on 15-11-2018.
+ */
 @Document(collection = "roles")
-public class Role {
+public class Role extends Base {
 
     public Role(String role, String description) {
         this.role = role;
-        this.description = description;
     }
-
-    @Id
-    private String id;
 
     @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
     private String role;
 
-    private String description;
 
     @DBRef
     private Set<Permission> permissions;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getRole() {
         return role;
@@ -41,14 +31,6 @@ public class Role {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Set<Permission> getPermissions() {
@@ -65,6 +47,6 @@ public class Role {
                 "Role[id=%s, " +
                         "role='%s', " +
                         "description='%s']",
-                id, role, description);
+                getId(), role, getDescription());
     }
 }

@@ -9,6 +9,7 @@
 
 	<name>web-app-auth-parent</name>
 	<description>web application authentication framework parent</description>
+	<url>https://github.com/akshay-misra-backend-products/web-app-authentication</url>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -32,8 +33,8 @@
 	<scm>
 		<connection>scm:git:https://github.com/akki2488/web-app-authentication.git</connection>
 		<developerConnection>scm:git:git@github.com:akki2488/web-app-authentication.git</developerConnection>
-		<url>https://github.com/akki2488/web-app-authentication</url>
-		<tag>v0.0.1</tag>
+		<url>https://github.com/akshay-misra-backend-products/web-app-authentication</url>
+		<tag>0.0.1</tag>
 	</scm>
 
 	<distributionManagement>
@@ -57,16 +58,49 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<configuration>
-						<skip>true</skip>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<inherited>false</inherited>
+				<configuration>
+					<outputDirectory>${basedir}/target</outputDirectory>
+					<resources>
+						<resource>
+							<directory>${basedir}</directory>
+							<include>bintray.json</include>
+							<filtering>true</filtering>
+						</resource>
+					</resources>
+				</configuration>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-akki2488-framework-core</id>
+			<name>bintray</name>
+			<url>https://dl.bintray.com/akki2488/framework-core</url>
+		</repository>
+	</repositories>
 </project>
