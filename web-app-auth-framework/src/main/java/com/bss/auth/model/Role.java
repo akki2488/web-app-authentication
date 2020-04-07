@@ -1,8 +1,6 @@
 package com.bss.auth.model;
 
 import com.bss.framework.core.schema.model.Base;
-import org.springframework.data.mongodb.core.index.IndexDirection;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,24 +12,17 @@ import java.util.Set;
 @Document(collection = "roles")
 public class Role extends Base {
 
-    public Role(String role, String description) {
-        this.role = role;
+    public Role(String name) {
+        this.setName(name);
     }
 
-    @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
-    private String role;
-
+    public Role(String name, String description) {
+        this.setName(name);
+        this.setDescription(description);
+    }
 
     @DBRef
     private Set<Permission> permissions;
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 
     public Set<Permission> getPermissions() {
         return permissions;
@@ -45,8 +36,8 @@ public class Role extends Base {
     public String toString() {
         return String.format(
                 "Role[id=%s, " +
-                        "role='%s', " +
+                        "name='%s', " +
                         "description='%s']",
-                getId(), role, getDescription());
+                getId(), getName(), getDescription());
     }
 }

@@ -46,7 +46,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	private Set<SimpleGrantedAuthority> getAuthority(User user) {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
 		user.getRoles().forEach(role -> {
-            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRole()));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getName()));
 		});
 		return authorities;
 	}
@@ -76,7 +76,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			roleRepository.saveAll(defaultRoles);
 		}
 
-		Role userRole = roleRepository.findByRole("ADMIN");
+		Role userRole = roleRepository.findByName("ADMIN");
 		newUser.setRoles(new HashSet<>(Arrays.asList(userRole)));
 		newUser.setEnabled(true);
 		System.out.println("CustomUserDetailsService saving, newUser: "+ newUser);

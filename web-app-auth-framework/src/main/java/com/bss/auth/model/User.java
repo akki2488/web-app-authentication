@@ -54,6 +54,7 @@ public class User extends Base {
 
     public void setUserName(String userName) {
         this.userName = userName;
+        this.setName(userName);
     }
 
     public String getPassword() {
