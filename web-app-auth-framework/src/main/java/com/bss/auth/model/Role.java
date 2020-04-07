@@ -12,6 +12,10 @@ import java.util.Set;
 @Document(collection = "roles")
 public class Role extends Base {
 
+    public Role() {
+
+    }
+
     public Role(String name) {
         this.setName(name);
     }
