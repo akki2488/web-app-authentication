@@ -1,4 +1,4 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
 /**
  * Created by Akshay Misra on 14-11-2018.

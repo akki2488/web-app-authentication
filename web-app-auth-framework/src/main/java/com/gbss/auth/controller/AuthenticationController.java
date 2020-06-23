@@ -1,8 +1,8 @@
-package com.bss.auth.controller;
+package com.gbss.auth.controller;
 
-import com.bss.auth.config.TokenProvider;
-import com.bss.auth.model.AuthToken;
-import com.bss.auth.model.LoginUser;
+import com.gbss.auth.config.TokenProvider;
+import com.gbss.auth.model.AuthToken;
+import com.gbss.auth.model.LoginUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

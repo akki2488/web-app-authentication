@@ -1,4 +1,4 @@
-package com.bss.auth.model;
+package com.gbss.auth.model;
 
 /**
  * Created by Akshay Misra on 15-11-2018.

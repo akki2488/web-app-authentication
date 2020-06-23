@@ -1,9 +1,9 @@
-package com.bss.auth.service;
+package com.gbss.auth.service;
 
-import com.bss.auth.model.Role;
-import com.bss.auth.model.User;
-import com.bss.auth.repositories.RoleRepository;
-import com.bss.auth.repositories.UserRepository;
+import com.gbss.auth.model.Role;
+import com.gbss.auth.model.User;
+import com.gbss.auth.repositories.RoleRepository;
+import com.gbss.auth.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

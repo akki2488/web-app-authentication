@@ -1,4 +1,4 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
 import io.jsonwebtoken.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

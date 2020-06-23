@@ -1,4 +1,4 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

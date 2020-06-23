@@ -1,6 +1,6 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
-import com.bss.auth.service.CustomUserDetailsService;
+import com.gbss.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

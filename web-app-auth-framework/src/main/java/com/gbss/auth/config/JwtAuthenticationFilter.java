@@ -1,6 +1,6 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
-import com.bss.auth.service.CustomUserDetailsService;
+import com.gbss.auth.service.CustomUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.bss.auth.config;
+package com.gbss.auth.config;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;

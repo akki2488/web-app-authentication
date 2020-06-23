@@ -1,6 +1,6 @@
-package com.bss.auth.repositories;
+package com.gbss.auth.repositories;
 
-import com.bss.auth.model.Role;
+import com.gbss.auth.model.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

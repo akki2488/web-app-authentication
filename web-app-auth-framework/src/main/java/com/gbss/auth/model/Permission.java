@@ -1,6 +1,6 @@
-package com.bss.auth.model;
+package com.gbss.auth.model;
 
-import com.bss.framework.core.schema.model.Base;
+import com.gbss.framework.core.model.entities.Base;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**

@@ -1,6 +1,6 @@
-package com.bss.auth.model;
+package com.gbss.auth.model;
 
-import com.bss.framework.core.schema.model.Base;
+import com.gbss.framework.core.model.entities.Base;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -45,8 +45,13 @@ public class User extends Base {
 
     private boolean enabled;
 
-    @DBRef
+    @DBRef(lazy = true)
     private Set<Role> roles;
+
+    @Override
+    public void setObjectTypeId(String objectTypeId) {
+        super.setObjectTypeId("5eee9edd37f5cc0de602cea3");
+    }
 
     public String getUserName() {
         return userName;

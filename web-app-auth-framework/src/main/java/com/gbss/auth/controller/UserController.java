@@ -1,7 +1,7 @@
-package com.bss.auth.controller;
+package com.gbss.auth.controller;
 
-import com.bss.auth.model.User;
-import com.bss.auth.service.CustomUserDetailsService;
+import com.gbss.auth.model.User;
+import com.gbss.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

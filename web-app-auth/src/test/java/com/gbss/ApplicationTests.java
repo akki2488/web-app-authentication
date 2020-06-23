@@ -1,4 +1,4 @@
-package com.bss;
+package com.gbss;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
